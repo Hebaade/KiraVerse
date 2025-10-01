@@ -1,0 +1,92 @@
+/* Light mode overrides */
+.theme-light .review-card {
+  background: #e6e6f7;
+  color: #232526;
+  border: 1px solid #d1bce3;
+}
+
+.theme-light .review-title {
+  color: #232526;
+  text-shadow: 0 2px 6px #d1bce3;
+}
+
+.theme-light .review-text {
+  color: #232526;
+}
+
+.theme-light .review-score {
+  color: #8b7bbf;
+}
+
+.theme-light .review-tag {
+  background: linear-gradient(90deg, #d1bce3 0%, #8b7bbf 100%);
+  color: #232526;
+}
+
+/* Softer Glassy Manga Review Card - Calm Anime Theme */
+.review-card {
+  background: linear-gradient(135deg, #2c2f33 0%, #4e5d94 100%);
+  border-radius: 28px;
+  box-shadow: 0 6px 20px rgba(78, 93, 148, 0.35);
+  padding: 40px 28px;
+  margin: 36px auto;
+  width: 95%;
+  color: #f4f6fa;
+  position: relative;
+  transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  animation: fadeInCard 0.7s cubic-bezier(.4, 0, .2, 1);
+}
+
+.review-card:hover {
+  box-shadow: 0 12px 28px rgba(78, 93, 148, 0.45);
+  transform: translateY(-4px) scale(1.02);
+  background: linear-gradient(135deg, #3c3f46 0%, #5968a8 100%);
+}
+
+.review-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #a3baff;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.review-text {
+  font-size: 1rem;
+  opacity: 0.9;
+  color: #e6e9f0;
+  margin-bottom: 22px;
+  line-height: 1.8;
+}
+
+.review-score {
+  font-size: 1.1rem;
+  color: #8fd3f4;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.review-tag {
+  background: linear-gradient(90deg, #8fd3f4 0%, #84fab0 100%);
+  color: #1c1c1c;
+  border-radius: 10px;
+  padding: 5px 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+}
+
+.review-tag:hover {
+  transform: scale(1.08);
+}
+
+.review-user {
+  font-size: 1rem;
+  color: #b5c9f1;
+  font-weight: 600;
+  margin: 15px 0;
+}

@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+ font-family: "Roboto", sans-serif;
+}
+.theme-button, .scroll-button {
+    padding: 12px 22px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-button:hover, .scroll-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 16px rgba(139,123,191,0.25);
+}
+
+.theme-dark {
+    background-color: #1f1f2e;
+    color: #fff;
+    transition: background 0.3s, color 0.3s;
+}
+.theme-light {
+    background-color: #d9d9db59;
+    color: #232526;
+    transition: background 0.3s, color 0.3s;
+}

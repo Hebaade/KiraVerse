@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* Theme classes for header */
+.theme-dark header {
+  background: linear-gradient(90deg, #1f1f2e 0%, #8b7bbf 100%);
+  color: #fff;
+}
+
+.theme-light header {
+  background: linear-gradient(90deg, #f8f8fc 0%, #d1bce3 100%);
+  color: #232526;
+}
+
+.theme-light .logAdd {
+  color: #232526;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(8px);
+}
+
+.theme-light .logAdd::before {
+  background: linear-gradient(45deg, #ff6e7f99, #c77dff99, #ff6e7f99);
+}
+
+.theme-light .logAdd h1 {
+  background: linear-gradient(120deg, #ff6e7f, #c77dff);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 8s linear infinite;
+  text-shadow: 2px 2px 4px rgba(199, 125, 255, 0.2);
+}
+
+.theme-light .logAdd:hover h1 {
+  text-shadow: 
+    0 0 15px rgba(255, 110, 127, 0.4),
+    0 0 30px rgba(199, 125, 255, 0.3);
+}
+
+.theme-dark .logAdd::before {
+  background: linear-gradient(45deg, #ff6e7fcc, #c77dffcc, #ff6e7fcc);
+}
+
+.theme-dark .logAdd h1::before {
+  opacity: 0.7;
+}
+
+.theme-dark .logAdd:hover h1 {
+  text-shadow: 
+    0 0 15px rgba(255, 110, 127, 0.6),
+    0 0 30px rgba(199, 125, 255, 0.4),
+    0 0 45px rgba(199, 125, 255, 0.2);
+}
+
+.theme-light nav .link {
+  color: #232526;
+  background: #e6e6f7;
+  font-weight: 700;
+}
+
+.theme-light nav .link:hover {
+  background: linear-gradient(90deg, #d1bce3 20%, #8b7bbf 100%);
+  color: #232526;
+  box-shadow: 0 2px 8px #d1bce3;
+}
+
+/* Logo styles */
+.logAdd {
+  position: relative;
+  z-index: 1;
+  padding: 8px 20px;
+  border-radius: 16px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+
+.logAdd::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 2px;
+  background: linear-gradient(45deg, #ff6e7f, #c77dff, #ff6e7f);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.logAdd:hover::before {
+  opacity: 1;
+}
+
+.logAdd h1 {
+  font-family: "Lobster Two", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  background: linear-gradient(120deg, #ff6e7f, #c77dff);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+  animation: gradientFlow 8s linear infinite, neonPulse 1.5s ease-in-out infinite alternate;
+  text-shadow: 
+    0 0 7px #ff6e7f,
+    0 0 10px #ff6e7f,
+    0 0 21px #ff6e7f,
+    0 0 42px #c77dff,
+    0 0 82px #c77dff,
+    0 0 92px #c77dff,
+    0 0 102px #c77dff,
+    0 0 151px #c77dff;
+}
+
+.logAdd h1::before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #ff6e7f22, #c77dff22);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.5;
+}
+
+.logAdd h1::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background: linear-gradient(120deg, #ff6e7f15, #c77dff15);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: blur(8px);
+  transform: translateY(2px);
+  transition: all 0.3s ease;
+}
+
+.logAdd:hover h1 {
+  transform: translateY(-2px);
+  text-shadow: 
+    0 0 10px rgba(255, 110, 127, 0.5),
+    0 0 20px rgba(199, 125, 255, 0.3);
+  letter-spacing: 2px;
+}
+
+.logAdd:hover h1::after {
+  filter: blur(12px);
+  transform: translateY(4px);
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header styles */
+header {
+  width: 100%;
+  background: linear-gradient(90deg, #1f1f2e 0%, #8b7bbf 100%);
+  box-shadow: 0 4px 20px rgba(139, 123, 191, 0.35);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background 0.4s, box-shadow 0.4s;
+  animation: fadeInHeader 0.8s cubic-bezier(.4, 0, .2, 1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.logAdd {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.logAdd:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.logAdd h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(120deg, #fff, #d1bce3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+  letter-spacing: 0.5px;
+}
+
+header img {
+  height: 35px;
+  width: 35px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.15);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+header img:hover {
+  transform: scale(1.15) rotate(-5deg);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.25);
+}
+
+nav {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  transition: gap 0.3s;
+}
+
+nav .link {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f1effa;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+nav .link:hover {
+  background: linear-gradient(90deg, #8b7bbf 20%, #d1bce3 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Menu icon hidden by default */
+svg.menu-icon {
+  display: none;
+  font-size: 2.2rem !important;
+  color: #d1bce3;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.2s;
+}
+
+svg.menu-icon:hover {
+  color: #a58acb;
+  transform: scale(1.12);
+}
+
+/* Desktop nav */
+nav {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+
+/* Mobile responsive */
+@media (max-width: 850px) {
+  header {
+    position: relative;
+  }
+
+  svg.menu-icon {
+    display: block;
+  
+  }
+
+  nav {
+    left: 0;
+    top: 100%;
+    order: 3;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: flex-start;
+    background: linear-gradient(120deg, #1f1f2e 0%, #8b7bbf 100%);
+    padding: 14px 20px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  nav.active {
+    display: flex;
+    animation: slideDownMenu 0.4s ease;
+  }
+}
+
+@keyframes slideDownMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

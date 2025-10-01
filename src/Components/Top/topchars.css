@@ -1,0 +1,159 @@
+/* Light mode overrides */
+.theme-light .top-chars-container {
+  background: #f7f7ff;
+  color: #232526;
+  border: 1px solid #bfa7e6;
+  box-shadow: 0 12px 48px #bfa7e622, 0 0 0 6px #ffb3c611;
+}
+
+.theme-light .top-chars-title {
+  color: #8b7bbf;
+  text-shadow: 0 2px 8px #bfa7e644;
+}
+
+.theme-light .top-char-card {
+  background: #fff;
+  color: #232526;
+  border: 1px solid #bfa7e6;
+  box-shadow: 0 4px 24px #bfa7e611;
+}
+
+/* Select styling */
+.top-chars-container select {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(191, 167, 230, 0.3);
+  color: #e8eaf6;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 1rem;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.top-chars-container select:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(191, 167, 230, 0.5);
+}
+
+.top-chars-container select:focus {
+  outline: none;
+  border-color: #bfa7e6;
+  box-shadow: 0 0 0 2px rgba(191, 167, 230, 0.2);
+}
+
+.theme-light .top-chars-container select {
+  background: rgba(255, 255, 255, 0.9);
+  color: #232526;
+  border: 1px solid #bfa7e6;
+}
+
+.theme-light .top-chars-container select:hover {
+  background: #ffffff;
+  border-color: #8b7bbf;
+}
+
+/* Top Anime Characters - Calm Glassy Modern Theme */
+.top-chars-container {
+  max-width: 1100px;
+  margin: 48px auto;
+  background: linear-gradient(120deg, #232526 0%, #bfa7e6 100%);
+  border-radius: 32px;
+  box-shadow: 0 12px 48px #bfa7e644, 0 0 0 6px #ffb3c633;
+  padding: 48px 32px;
+  color: #e8eaf6;
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  backdrop-filter: blur(12px) saturate(180%);
+}
+
+.top-chars-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #d6a4c7;
+  margin-bottom: 32px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px #bfa7e644;
+}
+
+.top-chars-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.top-char-card {
+  background: linear-gradient(120deg, #f7e6ff 0%, #bfa7e6 100%);
+  border-radius: 20px;
+  box-shadow: 0 4px 24px #bfa7e644;
+  padding: 24px 18px;
+  color: #6a6f8c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.top-char-card:hover {
+  box-shadow: 0 8px 32px #bfa7e666;
+  transform: translateY(-2px) scale(1.03);
+  background: linear-gradient(120deg, #bfa7e6 0%, #f7e6ff 100%);
+}
+
+.top-char-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px #bfa7e622;
+  margin-bottom: 18px;
+  background: #e8eaf6;
+}
+
+.top-char-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #d6a4c7;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.top-char-info {
+  font-size: 1rem;
+  color: #6a6f8c;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .top-chars-container {
+    padding: 18px 4vw;
+    border-radius: 18px;
+  }
+
+  .top-chars-title {
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+  }
+
+  .top-chars-list {
+    gap: 18px;
+  }
+
+  .top-char-card {
+    padding: 12px 6px;
+    border-radius: 10px;
+  }
+
+  .top-char-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+}

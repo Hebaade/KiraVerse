@@ -1,57 +1,16 @@
-# 🌌 KiraVerse
+# React + Vite
 
-**KiraVerse** is a **React Frontend** web app that brings the world of Anime & Manga to life.  
-It uses **Firebase Authentication** for user management and a free Anime/Manga API for content.  
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## ✨ Features
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-### 🔑 Authentication
-- Sign Up / Sign In / Log Out with **Firebase Auth**.
-- Reset Password functionality.
-- Update Display Name after logging in.
-- Add / Remove **Favorites** → Favorites appear on the User Profile page.
+## React Compiler
 
-### 👤 User Profile
-- Display user info (Name + Email).
-- Show user’s favorites list.
-- Change name, reset password, and log out easily.
+The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### ⭐ Reviews
-- Like / Unlike reviews.
-- Likes are saved in **localStorage** → no loss after refresh.
+## Expanding the ESLint configuration
 
-### 📺 Anime & Manga Pages
-- Browse Anime & Manga.
-- **Search** functionality.
-- Pagination (25 items per page).
-
-### 🏆 Top Page
-- Explore:
-  - 🥇 Top Anime
-  - 📚 Top Manga
-  - 🎭 Top Characters
-- Filter by category.
-
-### 📖 About Page
-- Introduction to **Anime** and **Manga**.
-- Explanation of different **Anime genres**.
-- Helps new users understand the culture and categories better.
-
-### 🎨 UI / UX
-- Stylish **Header** with Logo + Navigation.
-- **Responsive Design** (Burger Menu for mobile, Flex box and Grid).
-- 🌗 Dark / Light Mode toggle.
-- ⬆️ Scroll-to-Top button.
-- Modern Glow + Gradient effects on buttons and logo.
-
----
-
-## 🛠 Tech Stack
-- ⚛️ **React.js** (Frontend)
-- 🔥 **Firebase Auth** (Authentication)
-- 🎨 **CSS3**
-- 🎭 **Material UI Icons**
-- 💾 **localStorage**
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
